@@ -1,0 +1,115 @@
+body{
+	overflow: hidden;
+}
+
+header, footer {
+	height: 80px;
+	background-color: rgb(0, 0, 0);
+	display: flex; 
+	align-items: center;
+}
+
+header img {
+	height: 80px;
+	margin: 0px;
+}
+header * {
+	display: inline;
+}
+
+header li {
+	margin: 25 px;
+	padding: 10 px;
+}
+
+header li a{
+	color: rgb(35, 13, 236);
+	font-family: 'Chela One', cursive;
+	margin-left: 20px;
+	font-size: 1.35em;
+}
+
+header li a:hover{
+	color:rgb(0, 0, 0);
+	background-color:rgb(35, 13, 236);
+}
+
+.home {
+	height: 80vh;
+	width: 100vw;
+	background-image: url("TierList.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+
+.home {
+	display: block;
+}
+
+.brag-stats {
+	color: rgb(255, 255, 255);
+	font-family: 'Archivo Black', sans-serif;
+	font-size: large;
+	width: 250px;
+	height: 190px;
+	padding: 20px;
+	margin-left: 200px;
+	display: block;
+	float: left;
+}
+.foot-text {
+	color: rgb(35, 13, 236);
+	font-family: 'Dancing Script', cursive;
+	font-size: 1.5em;
+	margin-left: 25px;
+	margin-bottom: 10px;
+}
+
+.list-rank {
+	height: 80vh;
+	width: 100vw;
+	background-color: rgb(29, 23, 23);
+}
+
+.rank-one{
+	text-align: center;
+	padding: 20px;
+}
+
+.name{
+	font-family: 'Archivo Black', sans-serif;
+	font-size: medium;
+	color: gold;
+}
+
+.list-rank div img{
+	height: 125px;
+	width: 300px;
+}
+
+.rank-two{
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 300px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	float: left;
+}
+
+.rank-three{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+.rank-four{
+	text-align: center;
+	padding-left: 300px;
+	padding-right: 50px;
+	float: left;
+}
+
+.rank-five{
+	text-align: center;
+}
