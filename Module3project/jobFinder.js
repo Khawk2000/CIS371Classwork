@@ -1,5 +1,12 @@
 #! usr/bin/env node
 
+/*
+ * Module 3 Project
+ * JobFinder
+ * Keegan Hawkins
+ */
+
+
 const readline = require('readline').createInterface({
 		input: process.stdin,
 		output: process.stdout
