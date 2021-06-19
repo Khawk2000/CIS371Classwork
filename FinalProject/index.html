@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://unpkg.com/vue@next"></script>
+		<title>The HTML5 Herald</title>
+		<meta name="description" content="The HTML5 Herald">
+		<meta name="author" content="SitePoint">
+	</head>
+	<body>
+		<ul id='users-list'>
+			<li v-for='user in users' :key='user.id'>
+				{{ user.firstName}} {{user.lastName}} has email {{user.email}}
+			</li>
+		</ul>
+		<script>
+			fetch('http://35.39.165.226:3500/users')
+	.then(data => data.json() )
+	.then(json => {
+		console.log(json);
+		Vue.createApp({
+			data(){
+				return {
+					users: json
+				}
+			}
+		}).mount('#users-list');
+	});
+		</script>
+	</body>
+</html>

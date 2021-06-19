@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://unpkg.com/vue@next"></script>
+		<title>BookFace: Social Network For Learning</title>
+		<meta name="description" content="Social Network For Learning">
+		<meta name="author" content="SitePoint">
+		<link rel="stylesheet" href="snflstyles.css">
+	</head>
+	<body>
+		<header>
+			<h1> BookFace </h1>
+			<nav class="options">
+				<ul>
+					<li><a href="posts.html">Posts</a></li>
+					<li><a href="userlist.html">Users</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id='mod'>
+			<h3> Users Modification </h3>
+			<ul id='user-mod'>
+				<li v-for="data in users">
+					<div contenteditable='true' class='modScreen'> {{data}} </div>
+				</li> 
+			</ul>
+		</section>
+		<script>
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const value = urlParams.get('inputVal');
+			fetch('http://35.39.165.226:3500/users/' + value)
+	.then(data => data.json() )
+	.then(json => {
+		Vue.createApp({
+			data(){
+				return {
+					users: json
+				}
+			}
+		}).mount('#user-mod');
+	});
+
+		</script>
+	</body>
+</html>

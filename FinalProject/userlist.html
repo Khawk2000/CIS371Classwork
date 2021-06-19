@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://unpkg.com/vue@next"></script>
+		<title>BookFace: Social Network For Learning</title>
+		<meta name="description" content="Social Network For Learning">
+		<meta name="author" content="SitePoint">
+		<link rel="stylesheet" href="snflstyles.css">
+	</head>
+	<body>
+		<header>
+			<h1> BookFace </h1>
+			<nav class="options">
+				<ul>
+					<li><a href="posts.html">Posts</a></li>
+					<li><a href="userlist.html">Users</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<h3> Users </h3>
+			<input type='text' placeholder='User ID you would like to modify' id='myInput'>
+			<button type="button" onclick="loadModify();">Modify</button>
+			<ul id='user-list'>
+				<li v-for='user in users' :key='user.id'>
+					<p> User ID:{{user.id}}</p> <p class='spaceName'> {{user.firstName}} {{user.lastName}} <p><p class='spaceEmail'> Email: {{user.email}}<p>
+				</li> 
+			</ul>
+		</section>
+	</body>
+		<script>
+			fetch('http://35.39.165.226:3500/users')
+	.then(data => data.json() )
+	.then(json => {
+		console.log(json);
+		Vue.createApp({
+			data(){
+				return {
+					users: json
+				}
+			}
+		}).mount('#user-list');
+	});
+
+	function loadModify(){
+		var inputVal = document.getElementById('myInput').value;
+		location.href = "http://35.39.165.226/usermod.html?inputVal=" + inputVal;
+	}	
+		</script>
+</html>

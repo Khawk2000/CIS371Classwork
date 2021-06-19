@@ -1,0 +1,90 @@
+body {
+	background-color: lightblue;
+}
+
+header {
+	height: 80px;
+	width: 100vw;
+	background-color: gray;
+	display: flex;
+	align-items: center;
+}
+
+header * {
+	display: inline;
+}
+
+header h1{
+	color: green;
+	padding: 20px;
+	font-size: 2.5em;
+}
+
+header nav li {
+	margin: 25px;
+	padding : 10px;
+}
+header nav li a{
+	color: blue;
+	margin-left 20px;
+	font-size: 1.35em;
+}
+
+header nav li a:hover{
+	color:white;
+	background-color:blue;
+}
+
+section li{
+	display:flex;
+}
+
+.spaceId{
+	height: 10px;
+	display:inline;
+	
+}
+
+.spaceText{
+	width: 100vw;
+	display:inline;
+	color: black;
+	border: 3px solid blue;
+	text-align: center; 
+}
+
+.spaceName{
+	width: 60vw;
+	display: inline;
+	color: black;
+	border: 2px solid blue;
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+
+.spaceEmail {
+	width: 40px;
+	display: inline;
+	color: blue;
+}
+
+
+.modScreen{
+	margin: 20px;
+}
+
+section h3 {
+	font-size: 2em;
+	color: green;
+	border: 5px solid grey;
+	text-align: center;
+	margin-left: 30px;
+}
+
+
+
+
+
